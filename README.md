@@ -103,9 +103,52 @@ We will continuously monitor the ML models' performance and update them as neede
 * Business Outcomes:
 By utilizing ML to optimize rental usage, rental history and analytics, and weather and environmental considerations, our bike rental business can increase profitability, improve customer satisfaction, and promote environmentally friendly practices. Additionally, the business can gain a competitive advantage by offering optimized rental usage based on the input features. The ML models can also provide insights into user rental behavior and preferences that can inform future business decisions.
 
-## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+## Dashboard Design (Streamlit App User Interface)
+### Page 1: Quick project summary
+* Quick project summary
+	* Project Terms & Jargon
+	* Describe Project Dataset
+	* State Business Requirements
+
+### Page 2: Customer Base Bike Rental Study
+* Before the analysis, we knew we wanted this page to answer business requirement 1, but we couldn't know in advance which plots would need to be displayed.
+* After data analysis, we agreed with stakeholders that the page will: 
+	* State business requirement 1
+	* Checkbox: data inspection on customer base (display the number of rows and columns in the data, and display the first ten rows of the data)
+	* Display the most correlated variables to churn and the conclusions
+	* Checkbox: Individual plots showing the churn levels for each correlated variable 
+	* Checkbox: Parallel plot using correlated variables 
+
+### Page 3: Prospect Churnometer
+* State business requirement 2
+* Set of widgets inputs, which relates to the prospect profile. Each set of inputs is related to a given ML task to predict prospect Churn, Tenure and Cluster.
+* "Run predictive analysis" button that serves the prospect data to our ML pipelines, and predicts if the prospect will churn or not, if so, when. It also shows to which cluster the prospect belongs and the cluster's profile. For the churn and tenure predictions, the page will inform the associated probability for churning and tenure level.
+
+### Page 4: Project Hypothesis and Validation
+* Before the analysis, we knew we wanted this page to describe each project hypothesis, the conclusions, and how we validated each. After the data analysis, we can report that:
+
+
+### Page 5: Predict Churn
+* Considerations and conclusions after the pipeline is trained
+* Present ML pipeline steps
+* Feature importance
+* Pipeline performance
+
+### Page 6: Predict Tenure
+* Considerations and conclusions after the pipeline is trained
+* Present ML pipeline steps
+* Feature importance
+* Pipeline performance
+
+### Page 7: Cluster Analysis
+* Considerations and conclusions after the pipeline is trained
+* Present ML pipeline steps
+* Silhouette plot
+* Clusters distribution across Churn levels
+* Relative Percentage (%) of Churn in each cluster
+* The most important features to define a cluster
+* Cluster Profile
+
 
 
 
