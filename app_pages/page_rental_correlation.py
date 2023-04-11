@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-from jupyter_notebooks import *
+from src.data_management import load_data
 
 
 def page_bike_rental_correlation_body():
@@ -13,13 +13,7 @@ def page_bike_rental_correlation_body():
     # Correlation Study Summary
 
     # load data
-    bike = pd.read_csv('inputs/datasets/raw/bike_sharing_daily.csv')
-    bike = bike.drop(labels=['instant'], axis=1)
-    bike = bike.drop(labels=['casual', 'registered'], axis=1)
-    bike.dteday = pd.to_datetime(bike.dteday, format='%m/%d/%Y')
-    bike.index = pd.DatetimeIndex(bike.dteday)
-    bike = bike.drop(labels=['dteday'], axis=1)
-    bike
+    bike = load_data()
 
     vars_to_study = ['Temperature', 'Humidity', 'Windspeed', 'Rental']
 
