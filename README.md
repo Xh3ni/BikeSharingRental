@@ -139,7 +139,7 @@ By utilizing ML to optimize rental usage, rental history and analytics, and weat
 ## Deployment
 ### Heroku
 
-* The App live link is: https://bike-sharing-rental.herokuapp.com/ 
+* The App live link is: https://bikerental.herokuapp.com/ 
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
