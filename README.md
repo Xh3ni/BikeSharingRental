@@ -106,7 +106,7 @@ By utilizing ML to optimize rental usage, rental history and analytics, and weat
 ## Dashboard Design (Streamlit App User Interface)
 ### Page 1: Quick project summary
 * Quick project summary
-	* Project Terms & Jargon
+	* Quick Project Summary
 	* Describe Project Dataset
 	* State Business Requirements
 
@@ -115,50 +115,31 @@ By utilizing ML to optimize rental usage, rental history and analytics, and weat
 * After data analysis, we agreed with stakeholders that the page will: 
 	* State business requirement 1
 	* Checkbox: data inspection on customer base (display the number of rows and columns in the data, and display the first ten rows of the data)
-	* Display the most correlated variables to churn and the conclusions
-	* Checkbox: Individual plots showing the churn levels for each correlated variable 
-	* Checkbox: Parallel plot using correlated variables 
+	* Checkbox: Display Weekly Usage
+	* Checkbox: Display Monthly Usage
+    * Checkbox: Correlation of the distribution
 
-### Page 3: Prospect Churnometer
+### Page 3: Bike Rental Correlation
 * State business requirement 2
-* Set of widgets inputs, which relates to the prospect profile. Each set of inputs is related to a given ML task to predict prospect Churn, Tenure and Cluster.
-* "Run predictive analysis" button that serves the prospect data to our ML pipelines, and predicts if the prospect will churn or not, if so, when. It also shows to which cluster the prospect belongs and the cluster's profile. For the churn and tenure predictions, the page will inform the associated probability for churning and tenure level.
+* Set of widgets inputs, which relates to the prospect profile. Each set of inputs is related to a given ML task to predict usage
 
-### Page 4: Project Hypothesis and Validation
-* Before the analysis, we knew we wanted this page to describe each project hypothesis, the conclusions, and how we validated each. After the data analysis, we can report that:
-
-
-### Page 5: Predict Churn
+### Page 4: Predict Bike Rental
 * Considerations and conclusions after the pipeline is trained
 * Present ML pipeline steps
 * Feature importance
 * Pipeline performance
-
-### Page 6: Predict Tenure
-* Considerations and conclusions after the pipeline is trained
-* Present ML pipeline steps
-* Feature importance
-* Pipeline performance
-
-### Page 7: Cluster Analysis
-* Considerations and conclusions after the pipeline is trained
-* Present ML pipeline steps
-* Silhouette plot
-* Clusters distribution across Churn levels
-* Relative Percentage (%) of Churn in each cluster
-* The most important features to define a cluster
-* Cluster Profile
-
 
 
 
 ## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
+* At the second page Bike Rental Study, if the checkbox Monthly Usage is checked but not the Rental Weekly, then there will be display the usage for Month in blue and the usage for week in orange.
+
+![Monthly Usage](images/monthlyUsageBug.PNG)
 
 ## Deployment
 ### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
+* The App live link is: https://bike-sharing-rental.herokuapp.com/ 
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
@@ -172,25 +153,64 @@ By utilizing ML to optimize rental usage, rental history and analytics, and weat
 ## Main Data Analysis and Machine Learning Libraries
 * Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
 
+### Technologies
 
-## Credits 
+- Github was used to create the project's repository and store the project's files
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+- Gitpod was used to create and edit the project's files
 
-### Content 
+- Heroku was used to deploy the project
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- Slack was used to communicate with other students
 
-### Media
+- Kaggle was used to source the dataset for this project, and provide an API token allowing it to be downloaded
 
-- The photos used on the home and sign-up page are from This Open Source site
-- The images used for the gallery page were taken from this other open-source site
+### Libraries and Packages
+
+- [NumPy](https://numpy.org/) was used for basic mathematical operations such as standard deviations and mean values
+
+- [Pandas](https://pandas.pydata.org/) was used for many operations:
+    - Loading CSV files into Series and Dataframes
+    - Saving Series and Dataframes as CSV files
+    - Creating and modifying Series and Dataframes
+    - Creating a Pandas Profile Report to initially explore the data
+    - The correlation method for conduction the correlation study
+
+- [MatPlotLib](https://matplotlib.org/) and [Seaborn](https://seaborn.pydata.org/) were used for constructing plots to visualise my data analyses, in particular countplots and barplots
+
+- [Plotly](https://plotly.com/python/) was used for constructing interactive plots to visualise my data analyses, in particular several parallel plots
+
+- [Feature Engine](https://feature-engine.readthedocs.io/en/1.1.x/) was used for machine learning tasks:
+    - The OrdinalEncoder allowed me to encode categorical variables within the various pipelines used in this project
+    - The EqualFrequencyDiscretiser and ArbitraryDiscretiser modules enabled me to discretise the datasets for the classification tasks
+    - The OneHotEncoder enabled me to encode the dataset for the correlation study
+
+- [SciKit Learn](https://scikit-learn.org/stable/) was used for many machine learning tasks:
+    - Provided the various algorithms used to train the regression and classification model
+    - Pipeline for building machine learning pipelines
+    - SelectFromModel for feature selection steps in the pipelines
+    - Train-Test Split for creating train and test sets
+    - Make Scorer and Recall Score for assessing algorithm and hyperparameter performance
+    - Classification Report and Confusion Matrix for constructing classification reports and confusion matrices for assessing model performance
 
 
+### Resources
 
-## Acknowledgements (optional)
-* In case you would like to thank the people that provided support through this project.
+The following resources were used to assist in the construction of this project:
+
+- The Bike business uploaded the dataset to Kaggle. It is located [here](https://www.kaggle.com/datasets/xheni2810/predict-bike-rental-usage-using-an).
+
+- The Bike business dataset is reference by [Predict Bike Rental Usage Using ANNs (Regression Task)](https://colab.research.google.com/drive/1xwNiawxGiag04F5rDy_CZZZjbnnm63WX)
+
+- [My Fork of the Churnometer Walkthrough Project](https://github.com/AdamBoley/churnometer) proved to be of immense assistance. Firstly, I took several code blocks from it, which were used in the regression and classification model training. These are:
+    - The HyperparameterOptimizationSearch class, used for testing several algorithms and their hyperparameters
+    - The functions for generating a classification report and a confusion matrix
+    - The code for assessing feature importance
+
+- Secondly, the Churnometer project provided a general structure for me to follow in planning and executing this project. The idea of conducting a machine learning project was daunting early on, and following the workflow of the Churnometer project was useful in getting this project off the ground so that I could settle into it and make it my own
+
+
+## Acknowledgements
+* My husband Bernardo for his support and advice.
+* Students of Code Institute on slack.
 
