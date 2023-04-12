@@ -72,8 +72,8 @@ threadpoolctl==3.1.0
 toml==0.10.2
 toolz==0.12.0
 tqdm>=4.48.2
-typing_extensions=4.3.0 
-traitlets=5.8.1
+typing_extensions==4.3.0 
+traitlets==5.8.1
 tzdata==2023.3
 tzlocal==4.3
 validators==0.20.0
