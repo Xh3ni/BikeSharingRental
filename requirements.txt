@@ -78,6 +78,7 @@ validators==0.20.0
 visions==0.7.4
 watchdog==3.0.0
 Werkzeug==2.2.3
+wheel == 0.40.0
 widgetsnbextension==4.0.7
 xgboost==1.2.1
 yellowbrick
