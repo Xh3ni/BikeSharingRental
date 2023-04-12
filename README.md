@@ -139,6 +139,8 @@ By utilizing ML to optimize rental usage, rental history and analytics, and weat
 ## Deployment
 ### Heroku
 
+The App does not deploy on Heroku because of an Error library version of scipy
+![Heroku Error Deploy](images/heroku%20error.PNG)
 * The App live link is: https://bikerental.herokuapp.com/ 
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
