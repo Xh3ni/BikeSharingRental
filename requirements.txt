@@ -64,7 +64,6 @@ scipy>=1.4.1
 seaborn>=0.11.0
 six==1.15.0
 wrapt==1.14.1
-charset_normalizer==2.1.1
 statsmodels>=0.13.5
 streamlit==0.85.0
 tangled-up-in-unicode>=0.0.4
