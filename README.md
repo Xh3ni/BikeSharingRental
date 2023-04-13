@@ -6,7 +6,7 @@ This is a Machine Learning project developed as part of my Predictive Analytics 
 
 The Project is both a data analysis and a machine learning application. The data analysis helps users understand what factors affect the use of bike insted of other transport services such as bus or subway, the duration of travel, departure and arrival position. The machine learning application allows users to input temperature, humidity, wind speed,...etc information and get predictions of bike rental usage.
 
-The project is deployed here:
+The project is deployed [here](https://bike-sharing-rental.herokuapp.com/)
 
 ## Business Requirements
 
@@ -139,11 +139,7 @@ By utilizing ML to optimize rental usage, rental history and analytics, and weat
 ## Deployment
 ### Heroku
 
-The App does not deploy on Heroku because of an Error library version of scipy
-![Heroku Error Deploy](images/heroku%20error.PNG)
-* The App live link is: https://bikerental.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+* [The project](https://bike-sharing-rental.herokuapp.com/) was deployed to Heroku using the following steps.
 
 1. Log in to Heroku and create an App
 2. At the Deploy tab, select GitHub as the deployment method.
@@ -154,6 +150,12 @@ The App does not deploy on Heroku because of an Error library version of scipy
 
 ## Main Data Analysis and Machine Learning Libraries
 * Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+
+## PEP8 Compliance Testing
+
+The project contains a number of Python files. I therefore conducted validation of these using [Code Institute's Python Linter](https://pep8ci.herokuapp.com/). The results are:
+No errors were detected
+
 
 ### Technologies
 
