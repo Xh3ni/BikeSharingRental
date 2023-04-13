@@ -63,7 +63,7 @@ def page_rental_predict_body():
 
     # fit the pipeline to train a linear regression model on the training set
     model = pipeline.fit(X_train, (y_train))
-    st.write(model)
+    st.code(model)
 
     st.info(
         f"* Let's see how it performs with the validation data."
@@ -88,6 +88,7 @@ def page_rental_predict_body():
     z = np.polyfit(y_test, predictions, 1)
     p = np.poly1d(z)
     plt.plot(y_test,p(y_test), color='magenta')
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     st.pyplot()
 
 
@@ -108,7 +109,7 @@ def page_rental_predict_body():
 
     # fit the pipeline to train a linear regression model on the training set
     model = pipeline.fit(X_train, (y_train))
-    st.write(model, "\n")
+    st.code(model, "\n")
 
     # Get predictions
     predictions = model.predict(X_test)
@@ -129,6 +130,7 @@ def page_rental_predict_body():
     z = np.polyfit(y_test, predictions, 1)
     p = np.poly1d(z)
     plt.plot(y_test,p(y_test), color='magenta')
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     st.pyplot()
     st.write('---')
 
@@ -137,11 +139,11 @@ def page_rental_predict_body():
 
         # Create a numpy array containing a new observation (for example tomorrow's seasonal and weather forecast information)
         X_new = np.array([[1,1,0,3,1,1,0.226957,0.22927,0.436957,0.1869]]).astype('float64')
-        st.write('New sample: {}'.format(list(X_new[0])))
+        st.code('New sample: {}'.format(list(X_new[0])))
 
         # Use the model to predict tomorrow's rentals
         result = loaded_model.predict(X_new)
-        st.write('Prediction: {:.0f} rentals'.format(np.round(result[0])))
+        st.code('Prediction: {:.0f} rentals'.format(np.round(result[0])))
         st.write('---')
         st.info(
             f"* Suppose you have a weather forecast for the next five days;" 
@@ -159,7 +161,7 @@ def page_rental_predict_body():
         results = loaded_model.predict(X_new)
         st.write('5-day rental predictions:')
         for prediction in results:
-            st.write(np.round(prediction))
+            st.code(np.round(prediction))
 
 
 
