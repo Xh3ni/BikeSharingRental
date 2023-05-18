@@ -106,28 +106,29 @@ By utilizing ML to optimize rental usage, rental history and analytics, and weat
 ## Dashboard Design (Streamlit App User Interface)
 ### Page 1: Quick project summary
 * Quick project summary
-	* Quick Project Summary
+	* Quick Project Summary  ![HomePage](images/Design/description.PNG)
 	* Describe Project Dataset
 	* State Business Requirements
 
 ### Page 2: Customer Base Bike Rental Study
 * Before the analysis, we knew we wanted this page to answer business requirement 1, but we couldn't know in advance which plots would need to be displayed.
 * After data analysis, we agreed with stakeholders that the page will: 
-	* State business requirement 1
+	* State business requirement 1 ![Base Renal Usage](images/Design/BaseRentalUsage.PNG)
 	* Checkbox: data inspection on customer base (display the number of rows and columns in the data, and display the first ten rows of the data)
-	* Checkbox: Display Weekly Usage
-	* Checkbox: Display Monthly Usage
-    * Checkbox: Correlation of the distribution
+	* Checkbox: Display Weekly Usage ![WeeklyUsage](images/Design/rentalUsagePerWeek.PNG)
+	* Checkbox: Display Monthly Usage ![WeeklyUsage](images/Design/rentalUsagePerMonth.PNG)
+    * Checkbox: Correlation of the distribution ![WeeklyUsage](images/Design/CorrelationTemp.PNG) ![WeeklyUsage](images/Design/correlationHum.PNG) ![WeeklyUsage](images/Design/correlationWindSpeed.PNG) ![WeeklyUsage](images/Design/CorrelationUsage.PNG) ![WeeklyUsage](images/Design/VisualizeCheck.PNG)
 
 ### Page 3: Bike Rental Correlation
-* State business requirement 2
-* Set of widgets inputs, which relates to the prospect profile. Each set of inputs is related to a given ML task to predict usage
-
-### Page 4: Predict Bike Rental
+* State business requirement 2 ![WeeklyUsage](images/Design/BikeRentalCorrelationTemp.PNG) 
+* Set of widgets inputs, which relates to the prospect profile. Each set of inputs is related to a given ML task to predict usage ![WeeklyUsage](images/Design/humWindSpeed.PNG) ![WeeklyUsage](images/Design/Usage.PNG)  ![WeeklyUsage](images/Design/CorrelationData.PNG)                                                                                                                                                                                                      ### Page 4: Predict Bike Rental
+* The user to enters values for the features used in the model, and a button to predict rentals based on those values. 
+* When the user clicks the button, the model is used to make the prediction, and the predicted rentals are displayed on the screen.  ![WeeklyUsage](images/Design/Predict.PNG)                                                                                                             
+### Page 5: Bike Rental Pipeline
 * Considerations and conclusions after the pipeline is trained
 * Present ML pipeline steps
 * Feature importance
-* Pipeline performance
+* Pipeline performance ![WeeklyUsage](images/Design/Pipeline.PNG)                                                           
 
 
 
